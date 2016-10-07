@@ -7,9 +7,6 @@
     "snippets",
     "snippet manager"
   ],
-  "activationCommands": {
-    "atom-text-editor": "snippet-manager:toggle"
-  },
   "repository": "https://github.com/mb3online/atom-snippet-manager",
   "license": "MIT",
   "engines": {
