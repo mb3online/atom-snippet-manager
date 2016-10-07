@@ -1,21 +1,20 @@
 {
   "name": "snippet-manager",
   "main": "./lib/snippet-manager",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "A simple Atom package to manage snippet files automatically",
   "keywords": [
     "snippets",
     "snippet manager"
   ],
-  "activationCommands": {
-    "atom-workspace": "snippet-manager:toggle"
-  },
   "repository": "https://github.com/mb3online/atom-snippet-manager",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "cson-parser": "^1.3.4"
+    "cson-parser": "^1.3.4",
+    "lodash": "^4.16.4",
+    "mkdirp": "^0.5.1"
   }
 }

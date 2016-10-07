@@ -1,0 +1,18 @@
+{
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "Snippet Manager",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "snippet-manager:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
