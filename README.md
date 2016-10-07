@@ -1,4 +1,4 @@
-# Atom Snippet Manager Package
+# Atom Snippet Manager package
 
 A simple Atom package to manage snippet files automatically
 
