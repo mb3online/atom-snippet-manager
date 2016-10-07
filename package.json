@@ -1,7 +1,7 @@
 {
   "name": "snippet-manager",
   "main": "./lib/snippet-manager",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple Atom package to manage snippet files automatically",
   "keywords": [
     "snippets",
