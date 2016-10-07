@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-s": "snippet-manager:toggle"
+    "ctrl-alt-cmd-s": "snippet-manager:toggle"
   }
 }

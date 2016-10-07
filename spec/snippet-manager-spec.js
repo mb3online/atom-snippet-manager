@@ -1,5 +1,9 @@
 'use babel';
 
+import * as os from 'os';
+import * as fs from 'fs';
+import * as path from 'path';
+
 import SnippetManager from '../lib/snippet-manager';
 
 describe('SnippetManager', () => {
@@ -11,8 +15,8 @@ describe('SnippetManager', () => {
   });
 
   describe('when the snippet-manager:toggle event is triggered', () => {
-      it('should create symlinks in ~/.atom/snippets directory',() => {
-         expect('this should').toBe('fail');
+      it('should toggle',() => {
+         expect(SnippetManager.toggle()).toBeTruthy();
       });
   });
 });
