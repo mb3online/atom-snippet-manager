@@ -1,0 +1,62 @@
+".source.js.jsx":
+    DocBlock:
+        prefix: "docblock"
+        body: '''
+            /* speck
+             * 'name': '${1}'
+             * 'extends': '${2}'
+             * 'type': '${3}'
+             * 'description': '${4}'
+             * 'props': {${5}}
+             * 'sub components': [${6}]
+             * 'usage': {
+             *    'languages':
+             *        'jsx': \'''
+             *            <${1} ...props />
+             *        \'''
+             *    'properties':
+             *        ${8}
+             * }
+             * 'interactions': [${7}]
+            */
+        '''
+        description: "Formatted comment for MB3 Particle Docblocks"
+        rightLabelHTML: '''
+            <h3 style="color:#E54E4B;font-weight:bold">
+                MB<span style="font-weight:thin">3</span>
+            </h3>
+        '''
+        leftLabelHTML: '''
+            <h3 style="color:#ff0;font-weight:bold">
+                JS<span style="color:#8A53A6">X</span>
+            </h3>
+        '''
+    "React Component":
+        prefix: "component"
+        body: '''
+            import React, {PropTypes} from 'react';
+            import MB3 from '${1:Path to MB3 basic component in components}';
+
+            class ${1:ClassName} extends MB3.Component {
+                render() {
+                    return (
+                        ${2:<h1> Hello World! </h1>}
+                    );
+                }
+            }
+
+            ${1}.propTypes = {};
+
+            export default ${1};
+        '''
+        description: "Formatted MB3.Component extension for Particle"
+        rightLabelHTML: '''
+            <h3 style="color:#E54E4B;font-weight:bold">
+                MB<span style="font-weight:thin">3</span>
+            </h3>
+        '''
+        leftLabelHTML: '''
+            <h3 style="color:#ff0;font-weight:bold">
+                JS<span style="color:#8A53A6">X</span>
+            </h3>
+        '''
