@@ -9,7 +9,7 @@ import Manager from '../lib/manager';
 describe('Manager', () => {
     let manager;
 
-    beforeEach(() => manager = new Manager('~/MB3'));
+    beforeEach(() => manager = new Manager(__dirname));
 
     it('should be able to fetch files from the root directory', () => {
         manager.gather(files => {
