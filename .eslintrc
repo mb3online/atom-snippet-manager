@@ -1,0 +1,59 @@
+{
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+      "no-empty-function": "error",
+      "func-call-spacing": ["error", "never"],
+      "no-extra-parens": ["error", "all", { "conditionalAssign": false }],
+      "no-magic-numbers": "error",
+      "no-useless-call": "error",
+      "array-bracket-spacing": ["error", "always", {
+        "singleValue": false,
+        "arraysInArrays": false,
+        "objectsInArrays": false
+      }],
+      "block-spacing": "error",
+      "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+      "comma-dangle": ["error", "always-multiline"],
+      "comma-spacing": ["error", { "before": false, "after": true }],
+      "comma-style": ["error", "last"],
+      "eol-last": "error",
+      "indent": ["error", 4, {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1,
+        "MemberExpression": 1
+      }],
+      "key-spacing": ["error", { "beforeColon": false }],
+      "keyword-spacing": ["error", { "before": true, "after": true }],
+      "new-parens": "error",
+      "newline-before-return": "error",
+      "newline-per-chained-call": "error",
+      "no-lonely-if": "error",
+      "no-mixed-spaces-and-tabs": "error",
+      "no-new-object": "error",
+      "no-trailing-spaces": "error",
+      "no-unneeded-ternary": "error",
+      "no-whitespace-before-property": "error",
+      "object-curly-newline": ["error", { "multiline": true }],
+      "one-var": ["error", "never"],
+      "padded-blocks": ["error", "never"],
+      "quotes": ["error", "single", {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }],
+      "space-before-function-paren": ["error", "never"],
+      "space-in-parens": ["error", "never"],
+      "spaced-comment": ["error", "always"],
+      "arrow-parens": [2, "as-needed"],
+      "constructor-super": "error",
+      "no-confusing-arrow": "error",
+      "no-duplicate-imports": "error",
+      "no-var": "error",
+      "prefer-const": "error"
+    }
+}

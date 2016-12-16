@@ -1,8 +1,8 @@
 {
   "name": "snippet-manager",
   "main": "./lib/snippet-manager",
-  "version": "1.1.0",
-  "description": "A simple Atom package to manage snippet files automatically",
+  "version": "2.1.0",
+  "description": "A simple Atom package to manage snippet files",
   "keywords": [
     "snippets",
     "snippet manager"
@@ -13,8 +13,13 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "lodash": "^4.16.4",
     "mkdirp": "^0.5.1",
-    "season": "^5.4.1"
+    "season": "^5.4.1",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2"
   }
 }

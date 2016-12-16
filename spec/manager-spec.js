@@ -33,10 +33,17 @@ describe('Manager', () => {
         const done = () => {
             manager.write();
 
-            expect(fs.readFileSync(path.join(os.homedir(), '.atom', 'snippets.cson'), 'utf8')
+            expect(fs.readFileSync(path.join(os.homedir(), '.atom', 'snippets.cson'))
+                            .toString()
                             .includes('DocBlock'))
                                 .toBeTruthy();
         };
         waitsForPromise(() => sym.then(done, done));
+    });
+
+    it('should be able to get snippets from gists', () => {
+        waitsForPromise(() =>
+            manager.getGistSnippets()
+                .then(data => expect(data.length).toBe(2)));
     });
 });
