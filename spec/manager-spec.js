@@ -42,8 +42,17 @@ describe('Manager', () => {
     });
 
     it('should be able to get snippets from gists', () => {
+        atom.config.set('snippet-manager:gist', 'ericadamski');
         waitsForPromise(() =>
             manager.getGistSnippets()
                 .then(data => expect(data.length).toBe(2)));
+    });
+
+    it('shouldn\'t break if no github username selected', () => {
+        atom.config.set('snippet-manager:gist', 'lol');
+        waitsForPromise(() =>
+            manager.getGistSnippets()
+                .then(data => expect(data.length).toBe(0)));
+        // atom.config.set('snippet-manager:gist', 'ericadamski');
     });
 });
