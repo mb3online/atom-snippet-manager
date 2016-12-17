@@ -22,13 +22,13 @@ describe('Manager', () => {
         console.log(sym);
         waitsForPromise(() =>
             sym.then(() =>
-                fs.readdirSync(path.join(os.homedir(), '/.atom/snippets'), (err, files) => {
-                    expect(files.length).toBe(1);
-                    done();
+                fs.readdir(path.join(os.homedir(), '/.atom/snippets'), (err, files) => {
+                    expect(files.length).toBe(3);
                 })));
     });
 
     it('should be able to rewrite the snippets file', () => {
+        atom.config.set('snippet-manager:gist', 'ericadamski');
         const sym = manager.gather().symlink();
         const done = () => {
             manager.write();
@@ -53,6 +53,5 @@ describe('Manager', () => {
         waitsForPromise(() =>
             manager.getGistSnippets()
                 .then(data => expect(data.length).toBe(0)));
-        // atom.config.set('snippet-manager:gist', 'ericadamski');
     });
 });
