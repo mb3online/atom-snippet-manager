@@ -16,8 +16,7 @@
     "axios": "^0.15.3",
     "lodash": "^4.16.4",
     "mkdirp": "^0.5.1",
-    "season": "^5.4.1",
-    "whatwg-fetch": "^2.0.1"
+    "season": "^5.4.1"
   },
   "devDependencies": {
     "eslint": "^3.12.2"
