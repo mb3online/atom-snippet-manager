@@ -13,7 +13,7 @@ describe('Manager', () => {
 
     it('should be able to get snippets from secret gists', () => {
         atom.config.set('snippet-manager:gist', 'ericadamski');
-        atom.config.set('snippet-manager:gtoken', '6f386953fcc0151f52517dabd7f0b184d99e9367');
+        atom.config.set('snippet-manager:gtoken', 'access token');
         waitsForPromise(() =>
             manager.getGistSnippets()
                 .then(data => {
