@@ -11,6 +11,17 @@ describe('Manager', () => {
 
     beforeEach(() => manager = new Manager(__dirname));
 
+    it('should be able to get snippets from secret gists', () => {
+        atom.config.set('snippet-manager:gist', 'ericadamski');
+        atom.config.set('snippet-manager:gtoken', '6f386953fcc0151f52517dabd7f0b184d99e9367');
+        waitsForPromise(() =>
+            manager.getGistSnippets()
+                .then(data => {
+                    atom.config.set('snippet-manager:gtoken', '');
+                    expect(data.length).toBe(3);
+                }));
+    });
+
     it('should be able to fetch files from the root directory', () => {
         manager.gather(files => {
             expect(files.length).toBe(1);
@@ -19,7 +30,6 @@ describe('Manager', () => {
 
     it('should be able to symlink files', () => {
         const sym = manager.gather().symlink();
-        console.log(sym);
         waitsForPromise(() =>
             sym.then(() =>
                 fs.readdir(path.join(os.homedir(), '/.atom/snippets'), (err, files) => {
