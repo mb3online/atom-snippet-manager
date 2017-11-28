@@ -12,4 +12,6 @@ JSON: `boolean` | `default : false`
 
 ## Usage
 
-Name any file with the convention `<name>.snippet.(cson|json)` and they will be entered into the snippets file.
+Name any file with the convention `<name>.snippet.(cson|json)` and they will be entered into the snippets file after running cmd+opt+ctl+s.
+
+To run the package on startup add `atom.commands.dispatch(document.querySelector('atom-workspace'), 'snippet-manager:toggle')` to the atom `init.coffee` file(. 😖)
