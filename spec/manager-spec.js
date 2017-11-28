@@ -32,6 +32,32 @@ describe('Manager', () => {
     });
 
     describe('.merge', () => {
+        it('should not fail if undefined or null is present', () => {
+            const destination = {};
+            const sources = [
+                null,
+                {
+                    js: { banana: '🍌' },
+                },
+                undefined,
+                {
+                    js: { orange: '🍎' },
+                },
+                {
+                    clojure: {
+                        body: 'asdasd',
+                        name: 'hello',
+                    },
+                },
+            ];
+
+            // Act
+            const result = manager.merge(destination, ...sources);
+
+            // Assert
+            expect(result).toBeInstanceOf(Object);
+        });
+
         it('should deep merge all sources into the destination object', () => {
             // Arrange
             const destination = {};
