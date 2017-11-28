@@ -13,8 +13,11 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "lodash": "^4.16.4",
+    "axios": "^0.17.1",
+    "dotenv": "^4.0.0",
     "mkdirp": "^0.5.1",
+    "prettier": "^1.8.2",
+    "ramda": "^0.25.0",
     "season": "^5.4.1"
   }
 }
